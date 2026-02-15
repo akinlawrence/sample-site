@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    overflow-x: hidden !important;
+    width: 100vw;
+
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+#main-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("images/hill.svg");
+    background-size: cover;
+    padding-top: 0px !important;
+}
+
+.default-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px !important;
+}
+
+.paketti-section {
+    background: linear-gradient(0deg, #fd9b30, #ebf793);
+}
+
+.yhteystiedot-section {
+    background: linear-gradient(0deg, #ffafc0, #e393f7);
+}
+
+.space {
+    padding-top: 250px;
+}
+
+.contact {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact h2 {
+    font-size: 4vh;
+    color: #494949;
+}
+
+.contact a {
+    font-size: 2.8vh;
+}
+
+.contact div {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact a:link {
+    text-decoration: none;
+    color: #d581a1;
+}
+.no-space{
+    margin:0;
+    padding: 0;
+}
+.card {
+    background-color: #fef7be;
+    border-color: #ffde59;
+    border-width: 15px;
+    border-style: solid;
+    padding: 15px;
+}
+
+.profile-image {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 25px;
+}
+
+.profile-image img {
+    max-height: 30vh;
+}
+
+header {}
+
+
+h1 {
+    font-size: 3rem;
+    color: #ff6f61;
+}
+
+p {
+    font-size: 1.3rem;
+    color: #444;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    background: #ffb347;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 8px 0 #ff9966;
+    transition: 0.2s;
+}
+
+button:active {
+    box-shadow: 0 4px 0 #ff9966;
+    transform: translateY(4px);
+}
+
+.bubble {
+    position: fixed;
+    border-radius: 50%;
+    opacity: 0.6;
+    will-change: transform;
+}
+
+footer {
+    padding: 20px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.sub-1 {
+    margin: auto;
+    padding: 20px;
+    max-width: 600px;
+    font-size: 4vh;
+}
+
+.sub-2 {
+    margin: auto;
+    padding: 20px;
+    max-width: 650px;
+    font-size: 2vh;
+}
+
+.title {
+    font-size: 6vh;
+}
+
+
+@media (max-width: 600px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) {
+    nav {
+        background-color: #f9b0e7;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+}
