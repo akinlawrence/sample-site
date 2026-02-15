@@ -31,7 +31,7 @@ button.addEventListener("click", () => {
         duration: 1,
         scrollTo: {
             y: targetSection,
-            offsetY: 0 
+            offsetY: 0
         },
         ease: "power2.inOut"
     });
@@ -44,7 +44,7 @@ button2.forEach(button2 => {
         gsap.to(window, {
             duration: 1,
             scrollTo: {
-                y: targetSection2, 
+                y: targetSection2,
                 offsetY: 0
             },
             ease: "power2.inOut"
@@ -70,7 +70,6 @@ button3.forEach(button3 => {
 })
 
 
-// Create floating bubbles
 for (let i = 0; i < 10; i++) {
     let bubble = document.createElement("div");
     bubble.classList.add("bubble");
@@ -78,12 +77,9 @@ for (let i = 0; i < 10; i++) {
     let size = Math.random() * 80 + 40;
     bubble.style.width = size + "px";
     bubble.style.height = size + "px";
+    bubble.style.pointerEvents = 'none';
     const colors = ["#ed3d3d", "#fe9c31", "#ebf793", "#f9b0e7", "#fe9c31"]; // 
     bubble.style.background = colors[Math.floor(Math.random() * colors.length)];
-
-    // bubble.style.background = `hsl(${Math.random()*360}, 70%, 70%)`;
-    // bubble.style.left = Math.random() * window.innerWidth + "px";
-    // bubble.style.top = window.innerHeight + "px";
 
     bubble.style.left = Math.random() * 100 + "vw";
     bubble.style.top = "100vh";
@@ -102,23 +98,32 @@ for (let i = 0; i < 10; i++) {
 }
 
 let panels = gsap.utils.toArray("section");
+let mm = gsap.matchMedia();
 
-ScrollTrigger.create({
-    trigger: panels[0].parentNode,
-    start: "top top",
-    end: "bottom bottom",
-    snap: {
-        snapTo: 1 / (panels.length - 1),
-        duration: 0.5,
-        delay: 0.1,
-        ease: "power1.inOut"
-    }
+mm.add("(min-width: 600px)", () => {
+ 
+    ScrollTrigger.create({
+        trigger: panels[0].parentNode,
+        start: "top top",
+        end: "bottom bottom",
+        snap: {
+            snapTo: 1 / (panels.length - 1),
+            duration: 0.5,
+            delay: 0.1,
+            ease: "power1.inOut"
+        }
+    });
+
+    return () => {
+        ScrollTrigger.getAll().forEach(st => st.kill());
+    };
 });
+
 
 window.addEventListener("load", () => {
-  ScrollTrigger.refresh();
+    ScrollTrigger.refresh();
 });
-// Button click animation
+
 document.querySelector(".fun-btn").addEventListener("click", () => {
     gsap.fromTo(".fun-btn",
         { rotation: 0 },

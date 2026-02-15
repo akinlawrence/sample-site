@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kekkerit</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <!-- Iconit ja nää -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Kuva lähde: https://pixabay.com/vectors/hill-tree-mountain-landscape-9026381/ -->
@@ -25,67 +29,72 @@
         </nav>
     </header>
 
-    <section id="main-section">
-        <div style="margin-bottom: 150px;">
-            <h1 class="title">kekkerit</h1>
-            <div class="card">
-                <p class="subtitle sub-1">Lasten juhlat tulossa?</p>
-                <p class="subtitle sub-2">Autamme mielellämme juhliin liittyvissä askareissa, kuten ohjelman
-                    järjestämisesessä,
-                    lastenvahtimisessa juhlanpäivinä ja unohtumattomien synttäreiden suunnittelussa!</p>
-                <button class="fun-btn tietoa-btn">Tutustu nyt</button>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="default-section paketti-section">
-        <div style="margin-bottom: 120px;">
-            <h1 class="title">Pikku synttäripaketti</h1>
-            <div class="card">
-                <p class="subtitle sub-1">Sisältö</p>
-                <p class="subtitle sub-2">Pikku synttäripaketissa ohjelmana on ohjattuja leikkejä ja onginta,
-                    synttäriohjaaja tulee järjestemään synttärit paikan päälle. Ei sisälly tarjoiluja, koristeluja tms.
-                    <br>
-                    <br>
-                    Synttäripaketinhinta on 45€<br>
-                    hinnoittelu on tehty juhlien keston mukaan 45€/2h synttärit
-                    <br>
-                    <button class="fun-btn yhteystiedot-btn">Ota yhteyttä ja varaa!</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="default-section yhteystiedot-section">
-        <div class="no-space" style="display: flex;flex-direction: row;">
-            <h1 class="no-space">Yhteystiedot</h1>
-        </div>
-
-        <div class="card">
-            <div class="profile-image">
-                <img src="images/profile.png" class="responsive-image" />
-            </div>
-
-            <div class="contact">
-                <div>
-                    <span
-                        style="color: white; background-color: #ffb347;border-radius: 15px;padding: 5px;margin-right:10px">
-                        <i class="fa fa-instagram fa-5x" aria-hidden="true"></i>
-                    </span>
-                    <span style="color: white; background-color: #ffb347;padding: 5px;border-radius: 15px;">
-                        <i class="fa fa-facebook-square fa-5x" aria-hidden="true"></i>
-                    </span>
-
+    <main>
+        <section id="main-section">
+            <div style="margin-bottom: 150px;">
+                <h1 class="title">Kekkerit</h1>
+                <div class="card">
+                    <p class="subtitle sub-1">Lasten juhlat tulossa?</p>
+                    <p class="subtitle sub-2">Autamme mielellämme juhliin liittyvissä askareissa, kuten ohjelman
+                        järjestämisesessä,
+                        lastenvahtimisessa juhlanpäivinä ja unohtumattomien synttäreiden suunnittelussa!</p>
+                    <button class="fun-btn tietoa-btn screen">Tutustu nyt</button>
+                    <button onclick="window.location.href='#tietoa'" class="fun-btn mobile">Tutustu nyt</button>
                 </div>
-                <h2>Kiinnostuitko? Ota yhteyttä ja varaa aika!</h2>
-                <a href="tel:+4733378901">Puhelin +358 xxxxxx</a>
-                <a href="mailto:webmaster@example.com">malli@esimerkki.fi</a>
+        </section>
+
+
+
+        <section id="tietoa" class="default-section paketti-section">
+            <div style="margin-bottom: 120px;">
+                <h1 class="title">Pikku synttäripaketti</h1>
+                <div class="card">
+                    <p class="subtitle sub-1">Sisältö</p>
+                    <p class="subtitle sub-2">Pikku synttäripaketissa ohjelmana on ohjattuja leikkejä ja onginta,
+                        synttäriohjaaja tulee järjestemään synttärit paikan päälle. Ei sisälly tarjoiluja, koristeluja
+                        tms.
+                        <br>
+                        <br>
+                        Synttäripaketinhinta on 45€<br>
+                        hinnoittelu on tehty juhlien keston mukaan 45€/2h synttärit
+                        <br>
+                        <button class="fun-btn yhteystiedot-btn screen">Ota yhteyttä ja varaa!</button>
+                        <button onclick="window.location.href='#yhteystiedot'" class="fun-btn mobile">Ota yhteyttä ja
+                            varaa!</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="yhteystiedot" class="default-section yhteystiedot-section">
+            <div class="no-space screen" style="display: flex;flex-direction: row;">
+                <h1 class="no-space">Yhteystiedot</h1>
             </div>
 
-        </div>
+            <div class="card">
+                <div class="profile-image">
+                    <img src="images/profile.png" class="responsive-image" />
+                </div>
 
-    </section>
+                <div class="contact">
+                    <div>
+                        <span
+                            style="color: white; background-color: #ffb347;border-radius: 15px;padding: 5px;margin-right:10px">
+                            <i class="fa fa-instagram fa-5x" aria-hidden="true"></i>
+                        </span>
+                        <span style="color: white; background-color: #ffb347;padding: 5px;border-radius: 15px;">
+                            <i class="fa fa-facebook-square fa-5x" aria-hidden="true"></i>
+                        </span>
+
+                    </div>
+                    <h2>Kiinnostuitko? Ota yhteyttä ja varaa aika!</h2>
+                    <a href="tel:+4733378901">Puhelin +358 xxxxxx</a>
+                    <a href="mailto:webmaster@example.com">malli@esimerkki.fi</a>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
     <script src="./script.js"></script>
 </body>
 
