@@ -1,7 +1,7 @@
 # Cartoonish website (HTML,JS)
 
 ## Try the page
-<a href="https://akinlawrence.github.io/kekkerit">Link to the website</a>
+<a href="https://akinlawrence.github.io/sample-site">Link to the website</a>
 
 ## About the project
 This site was done quickly for fun to like a cartoonish look.
